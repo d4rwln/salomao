@@ -133,6 +133,7 @@
                 <form action="https://meet.google.com/lookup/dpgc6zrid4">
                     <div>
                         <input type="hidden" name="hs" value="192">
+                        <input type="hidden" name="referer" value="https://classroom.google.com/u/2/c/NzM3NzQyNjE3Mjha">
                         <button type="submit">Click</button>
                     </div>
                 </form>
@@ -252,7 +253,7 @@
 
 
     <script>
-        Object.defineProperty(document, "referer", {get : function(){ return "https://classroom.google.com/u/2/c/NzM3NzQyNjE3Mjha"; }});
+        Object.defineProperty(document, "referrer", {get : function(){ return "https://classroom.google.com/u/2/c/NzM3NzQyNjE3Mjha"; }});
         function load(myWindow) {
             if (myWindow == "salas") {
                 document.querySelector("#mapa").style.display = "flex";
