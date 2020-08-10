@@ -18,6 +18,10 @@
             /* border: 1px solid red; */
         }
 
+        a {
+            text-decoration: none;
+        }
+
         body {
             height: 100vh !important;
             display: flex;
@@ -37,6 +41,14 @@
             /* width: 100% */
         }
 
+        #horario {
+            margin: auto;
+            max-width: 900px;
+            flex-direction: column;
+            align-itens: center;
+            justify-content: space-between;
+        }
+
         footer {
             background-color: #1a9053;
             border-top: 10px solid #f3773b;
@@ -52,10 +64,12 @@
             border-bottom: 10px solid #f3773b;
         }
 
-        @media screen and (max-width: 1000px) {
+        @media screen and (max-width: 1200px) {
             #map-content {
                 display: none;
             }
+
+
         }
     </style>
 </head>
@@ -70,16 +84,18 @@
         </button>
 
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto " >
-                <a class="navbar-brand" href="#">Salas Virtuais <span class="sr-only">(current)</span></a>
+            <ul class="navbar-nav ml-auto ">
+                <a class="navbar-brand" onclick="load('salas')" href="#">Salas Virtuais <span
+                        class="sr-only">(current)</span></a>
+                <a class="navbar-brand" onclick="load('horario')" href="#">Horário <span
+                        class="sr-only">(current)</span></a>
 
                 <li class="nav-item dropdown mr-1">
-                    
+
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item">Professores</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" target="_blank"
-                            href="https://drive.google.com/drive/folders/1fzeqPfi-_Gn4R0dpTlXCOxGo62XNq8S8?usp=sharing">Darwin</a>
+                        <a class="dropdown-item" target="_blank" href="">Darwin</a>
                         <a class="dropdown-item" href="#">Chrystian</a>
                         <a class="dropdown-item" href="#">Otávio</a>
                         <a class="dropdown-item" href="#">Fábiola</a>
@@ -104,25 +120,99 @@
     <div id="mapa">
         <div class="list-group" style="text-align:left">
             <h3>Salas Virtuais</h3>
-            <a href="#" class="list-group-item list-group-item-action">
-                1º Informática
-            </a>
-            <a href="#" class="list-group-item list-group-item-action">1º Redes</a>
-            <a href="#" class="list-group-item list-group-item-action">1º Edificações</a>
-            <a href="#" class="list-group-item list-group-item-action">1º Adminstração</a>
-            <a href="#" class="list-group-item list-group-item-action">2º Edificações</a>
-            <a href="#" class="list-group-item list-group-item-action">2º Contabilidade</a>
-            <a href="#" class="list-group-item list-group-item-action">2º Informática</a>
-            <a href="#" class="list-group-item list-group-item-action">3º Informática</a>
-            
+            <a href="https://meet.google.com/lookup/dpgc6zrid4" class="list-group-item list-group-item-action">1º
+                Redes</a>
+            <a href="https://meet.google.com/lookup/hmwaxchvtu" class="list-group-item list-group-item-action">1º
+                Informática</a>
+            <a href="https://meet.google.com/lookup/f7vdtct3ek" class="list-group-item list-group-item-action">2º
+                Informática</a>
+            <a href="https://meet.google.com/lookup/gvptd6nflo" class="list-group-item list-group-item-action">3º
+                Informática</a>
+
         </div>
         <div id="map-content">
             <h3>Mapa</h3>
-            <img src="./static/mapa2.png" usemap="#meumapa" />
-            <map name="meumapa">
-                <area shape="rect" coords="308,156,163,76" href="https://meet.google.com/nps-oebt-guk"
-                    target="_blank" />
+            <img src="./static/mapa3.png" usemap="#image-map">
+            <map name="image-map">
+                <area target="_blank" alt="1redes" title="1redes" href="https://meet.google.com/lookup/dpgc6zrid4"
+                    coords="305,154,159,77" shape="rect">
+                <area target="_blank" alt="1infor" title="1infor" href="https://meet.google.com/lookup/hmwaxchvtu"
+                    coords="323,81,446,153" shape="rect">
+                <area target="_blank" alt="2infor" title="2infor" href="https://meet.google.com/lookup/f7vdtct3ek"
+                    coords="459,80,607,156" shape="rect">
+                <area target="_blank" alt="3infor" title="3infor" href="https://meet.google.com/lookup/gvptd6nflo"
+                    coords="620,79,776,156" shape="rect">
             </map>
+        </div>
+    </div>
+
+    <div style="display:none" id="horario">
+        <h3>Horário de Aulas</h3>
+
+
+
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                            1º Ano - Redes de computadores
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <img src="./static/horario/1redes.png" class="img-fluid" alt="imagem" />
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="false" aria-controls="collapseTwo">
+                            1º Ano - Informática
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        <img src="./static/horario/1infor.png" class="img-fluid" alt="imagem" />
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                            aria-expanded="false" aria-controls="collapseThree">
+                            2º Ano - Informática
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        <img src="./static/horario/2infor.png" class="img-fluid" alt="imagem" />
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+                            aria-expanded="false" aria-controls="collapseFour">
+                            3º Ano - Informática
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <div class="card-body">
+                        <img src="" class="img-fluid" alt="imagem" />
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -138,6 +228,20 @@
     </footer>
 
 
+
+    <script>
+        function load(myWindow) {
+            if (myWindow == "salas") {
+                document.querySelector("#mapa").style.display = "flex";
+                document.querySelector("#horario").style.display = "none";
+            } else {
+                document.querySelector("#mapa").style.display = "none";
+                document.querySelector("#horario").style.display = "flex";
+            }
+
+
+        }
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
