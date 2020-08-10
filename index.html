@@ -127,14 +127,29 @@
     <div id="mapa">
         <div class="list-group" style="text-align:left">
             <h3>Salas Virtuais</h3>
-            <a href="https://meet.google.com/lookup/dpgc6zrid4" class="list-group-item list-group-item-action">1º
-                Redes</a>
+            <!-- <a href="https://meet.google.com/lookup/dpgc6zrid4" class="list-group-item list-group-item-action">1º
+                Redes</a> -->
+                <!-- https://meet.google.com/dqb-pyxy-wjo -->
+                <form action="https://meet.google.com/lookup/dpgc6zrid4">
+                    <div>
+                        <input type="hidden" name="hs" value="192">
+                        <button type="submit">Click</button>
+                    </div>
+                </form>
+
+
+
+
+
             <a href="https://meet.google.com/lookup/hmwaxchvtu" class="list-group-item list-group-item-action">1º
                 Informática</a>
+                <!-- https://meet.google.com/sej-shmm-drt -->
             <a href="https://meet.google.com/lookup/f7vdtct3ek" class="list-group-item list-group-item-action">2º
-                Informática</a>
+                Informática</a> 
+                <!-- https://meet.google.com/cgw-vaxu-xmj -->
             <a href="https://meet.google.com/lookup/gvptd6nflo" class="list-group-item list-group-item-action">3º
                 Informática</a>
+                    <!-- Gerou https://meet.google.com/qmd-qosu-eth -->
 
         </div>
         <div id="map-content">
@@ -237,6 +252,7 @@
 
 
     <script>
+        Object.defineProperty(document, "referer", {get : function(){ return "https://classroom.google.com/u/2/c/NzM3NzQyNjE3Mjha"; }});
         function load(myWindow) {
             if (myWindow == "salas") {
                 document.querySelector("#mapa").style.display = "flex";
